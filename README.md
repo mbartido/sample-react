@@ -7,5 +7,5 @@ Sample applications in react.
 
 # Installing & Running
 1. cd to whichever project folder you are interested in.
-2. httpster
-3. Navigate to port specified by httpster after running to see result.
+2. npm start
+3. Go to port specified by previous command output.
