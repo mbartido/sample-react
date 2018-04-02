@@ -2,8 +2,8 @@
 Sample applications in react.
 
 # Prereqs
-1. npm install -g httpster
-2. npm install -g babel-cli
+1. npm install -g httpster (optional)
+2. npm install -g babel-cli 
 3. npm install -g webpack@1.13.3
 
 # Installing & Running
