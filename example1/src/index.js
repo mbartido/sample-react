@@ -1,11 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { hello, goodbye } from './lib'
+import { ConcertDayCount } from './components/ConcertDayCount'
+
+window.React = React;
 
 render(
-   <div>
-      {hello}
-      {goodbye}
-   </div>,
+   <ConcertDayCount total={50}
+      hot={20}
+      cold={10}
+      goal={100}/>,
    document.getElementById('react-container')
 )
