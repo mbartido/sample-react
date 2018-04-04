@@ -1,6 +1,6 @@
 import '../stylesheets/ui.scss'
 import Terrain from 'react-icons/lib/md/terrain'
-import SnowFlake from 'react-icons/lib/ti/weather-snow'
+import Tint from 'react-icons/lib/fa/tint'
 import Calendar from 'react-icons/lib/fa/calendar'
 import '../stylesheets/ui.scss'
 
@@ -24,9 +24,9 @@ export const ConcertDayCount = ({total, hot, cold, goal}) => (
                   <Terrain />
                <span> days</span>
             </div>
-            <div className="cold-days">
+            <div className="rain-days">
                <span>{cold} </span>
-                  <SnowFlake />
+                  <Tint />
                <span> days</span>
             </div>
             <div>
