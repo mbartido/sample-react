@@ -42,5 +42,6 @@ export const ConcertDayCount = ({total=70, hot=20,
 ConcertDayCount.propTypes = {
    total: PropTypes.number,
    hot: PropTypes.number,
-   rain: PropTypes.number
+   rain: PropTypes.number,
+   goal: PropTypes.number
 }
