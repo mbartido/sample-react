@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import { ConcertDayList } from './ConcertDayList'
 import { ConcertDayCount } from './ConcertDayCount'
+import { AddDayForm } from './AddDayForm'
 
 export class App extends Component{
    constructor(props) {
@@ -42,10 +43,14 @@ export class App extends Component{
    render() {
       return (
          <div className="app">
-            <ConcertDayList days={this.state.allConcertDays}/>
+         {(this.props.location.pathname === "/") ? 
             <ConcertDayCount total={this.countDays()}
-                            hot={this.countDays('hot')} 
-                            rain={this.countDays('rain')}/>
+            hot={this.countDays('hot')} 
+            rain={this.countDays('rain')}/> :
+            (this.props.location.pathname === "/add-day") ?
+               <AddDayForm /> :
+               <ConcertDayList days={this.state.allConcertDays}/>
+         }
          </div>
       )
    }
