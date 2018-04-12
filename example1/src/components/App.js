@@ -51,7 +51,8 @@ export class App extends Component{
             rain={this.countDays('rain')}/> :
             (this.props.location.pathname === "/add-day") ?
                <AddDayForm /> :
-               <ConcertDayList days={this.state.allConcertDays}/>
+               <ConcertDayList days={this.state.allConcertDays}
+                               filter={this.props.params.filter}/>
          }
          </div>
       )
