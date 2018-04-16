@@ -11,24 +11,22 @@ export class App extends Component{
          allConcertDays: [
             {
                place: "Shoreline",
-               date: new Date("1/2/2016"),
+               date: "2016-01-02",
                hot: true,
                rain: false,
-            },
-            {
-               place: "Santa Clara Fairgrounds",
-               date: new Date("3/28/2016"),
-               hot: false,
-               rain: false,
-            },
-            {
-               place: "Bill Graham",
-               date: new Date("4/2/2016"),
-               hot: false,
-               rain: true,
             }
          ]
       }
+      this.addDay = this.addDay.bind(this)
+   }
+   
+   addDay(newDay) {
+      this.setState({
+         allConcertDays: [
+            ...this.state.allConcertDays,
+            newDay
+         ]
+      })
    }
 
    countDays(filter) {
@@ -50,7 +48,7 @@ export class App extends Component{
             hot={this.countDays('hot')} 
             rain={this.countDays('rain')}/> :
             (this.props.location.pathname === "/add-day") ?
-               <AddDayForm /> :
+               <AddDayForm onNewDay={this.addDay}/> :
                <ConcertDayList days={this.state.allConcertDays}
                                filter={this.props.params.filter}/>
          }

@@ -1,18 +1,25 @@
-import { PropTypes, Component } from 'react'
+import { PropTypes } from 'react'
 
 export const AddDayForm = ({ place,
                              date, 
                              rain, 
-                             hot } ) => {
+                             hot,
+                             onNewDay }) => {
    
    let _place, _date, _rain, _hot  
 
    const submit = (e) => {
       e.preventDefault()
-      console.log('place', _place.value)
-      console.log('date', _date.value)
-      console.log('rain',_rain.checked)
-      console.log('hot', _hot.checked)
+      onNewDay({
+         place: _place.value,
+         date: _date.value,
+         rain: _rain.checked,
+         hot: _hot.checked
+      })
+      _place.value = ''
+      _date.value = ''
+      _rain.checked = false
+      _hot.checked = false
    }
 
    return (

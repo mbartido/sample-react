@@ -6,7 +6,7 @@ import { PropTypes } from 'react'
 export const ConcertDayRow = ({place, date, hot, rain}) => (
    <tr>
       <td>
-         {date.getMonth()+1}/{date.getDate()}/{date.getFullYear()}
+         {date}
       </td>
       <td>
          {place}
@@ -22,7 +22,7 @@ export const ConcertDayRow = ({place, date, hot, rain}) => (
 
 ConcertDayRow.propTypes = {
    place: PropTypes.string.isRequired,
-   date: PropTypes.instanceOf(Date).isRequired,
+   date: PropTypes.string.isRequired,
    hot: PropTypes.bool,
    rain: PropTypes.bool
 }
